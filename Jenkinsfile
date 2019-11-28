@@ -1,4 +1,4 @@
 pipeline {
    stage('Code Checkout') {
-     git credentialsId: 'githubID', url: 'https://github.com/Project-purpose/Demo-Hello_world.git' 
+     git credentialsId: 'githubID', url: 'https://github.com/Project-purpose/Demo-SUM.git' 
    }
