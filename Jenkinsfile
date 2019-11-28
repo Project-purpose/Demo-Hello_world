@@ -13,4 +13,3 @@ pipeline{
      def app = docker build .
     }
 }
-   }
