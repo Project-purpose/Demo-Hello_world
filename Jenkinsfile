@@ -11,5 +11,6 @@ pipeline {
          steps {
                  def app = docker.build "ashhh24/new_practice"
       }
-   }
+    }
+  }
 }
