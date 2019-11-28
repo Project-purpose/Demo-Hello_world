@@ -5,3 +5,4 @@ pipeline {
    stage('Docker Build') {
      def app = docker build .
     }
+}
