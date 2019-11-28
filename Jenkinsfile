@@ -7,4 +7,3 @@ node{
    stage('Docker Build'){
      def app = docker build .
     }
-}
