@@ -9,7 +9,7 @@ pipeline {
    
       stage('Docker Build') {
          steps {
-                 def app = docker.build "ashhh24/newsum"
+                 def app = docker build "ashhh24/newsum" .
       }
     }
   }
