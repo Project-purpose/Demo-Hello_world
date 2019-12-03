@@ -1,4 +1,4 @@
-FROM scratch
+FROM python
 
 MAINTAINER Yesh
 
