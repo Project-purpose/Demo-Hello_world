@@ -18,10 +18,11 @@ pipeline {
    
    stage("Tag & Push image"){
       steps {
-      withDockerRegistry([credentialsId: 'dockerID',url: "https://hub.docker.com/u/ashhh24"])
+         withDockerRegistry([credentialsId: 'dockerID',url: "https://hub.docker.com/u/ashhh24"]) {
           sh 'docker tag ashhh24/newsum ashhh24/newsum:dev'
           sh 'docker push ashhh24/newsum:dev'
           sh 'docker push ashhh24/newsum:latest'       
+         }
       }
     }
   }
