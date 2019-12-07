@@ -9,9 +9,10 @@ pipeline {
    
       stage('Docker Build') {
          steps {
-            script
+            script {
               sudo su
-              docker.build ("ashhh24/newsum")
+              docker.build ("ashhh24/newsum")  
+            }
     }
  }
    
