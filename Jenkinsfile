@@ -9,7 +9,10 @@ pipeline {
    
       stage('Docker Build') {
          steps {
+            script {
+               
                  docker.build "ashhh24/newsum"
+            }
     }
  }
    
