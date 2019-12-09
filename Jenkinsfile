@@ -10,7 +10,7 @@ pipeline {
       stage('Docker Build') {
          steps {
             script {
-              sudo su
+              sudo usermod -a -G docker jenkins
               docker.build "ashhh24/newsum" 
             }
     }
