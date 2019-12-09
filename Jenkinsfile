@@ -1,5 +1,5 @@
 pipeline {
-   agent { docker }
+   agent { docker 'python' }
    stages {
       stage('Code Checkout') {
          steps {
