@@ -1,5 +1,5 @@
 pipeline {
-   agent { docker 'python' }
+   agent any
    stages {
       stage('Code Checkout') {
          steps {
@@ -17,6 +17,7 @@ pipeline {
  }
    
    stage("Tag & Push image"){
+      agent { docker }
       steps {
          withDockerRegistry([credentialsId: 'dockerID',url: " "]) {
           sh 'docker tag ashhh24/newsum ashhh24/newsum:dev'
