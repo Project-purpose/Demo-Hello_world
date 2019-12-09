@@ -10,10 +10,10 @@ pipeline {
       stage('Docker Build') {
          agent { docker 'python' }
          steps {
-            script {
-              sudo su
+            //script {
+              sudo usermod -a -G docker jenkins
               docker.build "ashhh24/newsum" 
-            }
+            //}
     }
  }
    
