@@ -8,6 +8,7 @@ pipeline {
       }
    
       stage('Docker Build') {
+         agent { docker 'python' }
          steps {
             script {
               sudo su
@@ -17,7 +18,6 @@ pipeline {
  }
    
    stage("Tag & Push image"){
-      agent { docker }
       steps {
          withDockerRegistry([credentialsId: 'dockerID',url: " "]) {
           sh 'docker tag ashhh24/newsum ashhh24/newsum:dev'
